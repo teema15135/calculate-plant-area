@@ -1,0 +1,28 @@
+{
+  "name": "calculate-plant-area",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teema15135/calculate-plant-area.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teema15135/calculate-plant-area/issues"
+  },
+  "homepage": "https://github.com/teema15135/calculate-plant-area#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mime-types": "^2.1.25",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}

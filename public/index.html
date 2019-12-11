@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate plant</title>
+</head>
+<body>
+    <form action="../upload" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <input id="file-input" name="file" type="file" accept="image/*" />
+        <input id="submit" type="submit" value="Upload" />
+    </form>
+    <script>
+        const fileInput = document.querySelector('#file-input');
+        const submitBtn = document.querySelector('#submit');
+
+        function validateForm() {
+            const validated = fileInput.files.length != 0;
+            if (!validated)
+                alert("Please select an image file...");
+            return validated;
+        }
+    </script>
+</body>
+</html>
