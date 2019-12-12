@@ -3,6 +3,7 @@ const app = express();
 const multer = require('multer');
 const mime = require('mime-types');
 const spawn = require("child_process").spawn;
+const fs = require('fs');
 
 app.use(multer({
     dest: 'uploads/',
@@ -24,7 +25,9 @@ app.post('/upload', function (req, res) {
     var isComplete = false;
     pythonProcess.stdout.on('data', (data) => {
         console.log(data.toString());
-        / Don't know if python error or not /
+        fs.unlink(filePath, function() {
+            console.log(`file ${filePath} has been removed`)
+        });
         isComplete = true;
         res.sendFile(__dirname + '/processed/' + data.toString().replace('\n', ''));
     });
